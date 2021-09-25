@@ -82,7 +82,7 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
                 <configuration>
-                <appName>obscure-refuge-39059</appName>
+                <appName>javabotforever</appName>
              
           <source>1.8</source>
           <target>1.8</target>
@@ -94,7 +94,7 @@
         <artifactId>heroku-maven-plugin</artifactId>
         <version>3.0.3</version>
          <configuration>
-                <appName>obscure-refuge-39059</appName>
+                <appName>javabotforever</appName>
               
           <source>1.8</source>
           <target>1.8</target>
