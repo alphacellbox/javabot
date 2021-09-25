@@ -687,7 +687,15 @@ public class MyAmazingBot extends TelegramLongPollingBot {
                                 
 							
 								int t = Integer.valueOf(update.getMessage().getText());
-								
+								SendMessage s=new SendMessage();
+								s.setText("آگهی شما تا 1 دقیقه بعد منقضی میشود");
+								s.setChatId(user_id);
+								try {
+									execute(s);
+								} catch (TelegramApiException e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}
 								
 								try {
 									
