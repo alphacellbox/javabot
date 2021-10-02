@@ -714,15 +714,7 @@ public class MyAmazingBot extends TelegramLongPollingBot {
 
 						} else if (update.getMessage().getText().equals("مدیریت آگهی🗄")) {
 							reset_levels(user_id);
-							SendMessage m = new SendMessage();
-							m.setText("صبر کنید...ربات در حال گرفتن اطلاعات از پایگاه داده میباشد");
-							m.setChatId(update.getMessage().getChatId().toString());
-							try {
-								execute(m);
-							} catch (TelegramApiException e) {
-								
-								e.printStackTrace();
-							}
+							
 
 							MongoCollection<Document> gradesCollection = javabot.App.database.getCollection("users");
 							Document student1 = gradesCollection.find(new Document("student_id", user_id)).first();
