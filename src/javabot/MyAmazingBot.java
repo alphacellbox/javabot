@@ -582,20 +582,30 @@ public class MyAmazingBot extends TelegramLongPollingBot {
 				}
 				if (channelmemmberstatue ) {
 					if (update.hasMessage() && update.getMessage().hasText()) {
-
+                             
 						if (update.getMessage().getText().equals("ثبت اگهی📝")) {
-							SendMessage m = new SendMessage();
-							m.setText(
-									"صبر کنید...ربات در حال بررسی وضعیت لینک های دعوت شماست...به ازای هر لینک دعوتی که گرفتید 2 ثانیه صبر کنید");
-							m.setChatId(update.getMessage().getChatId().toString());
+							MongoCollection<Document> gradesCollection = javabot.App.database.getCollection("users");
+							Document student1 = gradesCollection.find(new Document("student_id", user_id)).first();
+							String temp = "";
 
-							try {
-								execute(m);
-							} catch (TelegramApiException e) {
-								
-								e.printStackTrace();
-							}
+							if (student1 != null) {
+					
+								ArrayList<String> a1 = (ArrayList<String>) student1.get("advertising");
+								if (a1.size()>3) {
+									SendMessage m = new SendMessage();
+									m.setText(
+											"صبر کنید...ربات در حال بررسی وضعیت لینک های دعوت شماست...به ازای هر لینک دعوتی که گرفتید 2 ثانیه صبر کنید");
+									m.setChatId(update.getMessage().getChatId().toString());
 
+									try {
+										execute(m);
+									} catch (TelegramApiException e) {
+										
+										e.printStackTrace();
+									}
+								}
+						
+						}
 						}
 
 						if (enter_admin) {
@@ -714,7 +724,7 @@ public class MyAmazingBot extends TelegramLongPollingBot {
 
 						} else if (update.getMessage().getText().equals("مدیریت آگهی🗄")) {
 							reset_levels(user_id);
-							
+						
 
 							MongoCollection<Document> gradesCollection = javabot.App.database.getCollection("users");
 							Document student1 = gradesCollection.find(new Document("student_id", user_id)).first();
