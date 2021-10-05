@@ -45,8 +45,8 @@ import com.mongodb.client.result.UpdateResult;
 
 public class client extends Thread {
 	                                
-	public static final int API_ID =   8384841  ;
-	public static final String API_HASH = "341bc352c7e22649684c28e9055c9f6b";
+	public static final int API_ID =API_ID   ;
+	public static final String API_HASH = "API_HASH ";
 	
 
 	// What you want to appear in the "all sessions" screen
