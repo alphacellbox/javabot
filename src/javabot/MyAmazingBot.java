@@ -47,7 +47,7 @@ public class MyAmazingBot extends TelegramLongPollingBot {
 	//return "";
 	@Override
 	public String getBotToken() {
-		return "Token";
+		return "1982316478:AAF5cVpgnQnqHUe-wZ_h8v9aIMs5nI8e7_4";
 	}
 	String username;
 	String password;
@@ -58,7 +58,7 @@ public class MyAmazingBot extends TelegramLongPollingBot {
 	boolean channelmemmberstatue;
 	boolean set_admin_pass;
 	public boolean ischannelmember(String user) throws MalformedURLException, IOException {
-		String url = "https://api.telegram.org/botToken/getChatMember?chat_id=@Agahi_Daneshjouei&user_id="
+		String url = "https://api.telegram.org/bot1982316478:AAF5cVpgnQnqHUe-wZ_h8v9aIMs5nI8e7_4/getChatMember?chat_id=@Agahi_Daneshjouei&user_id="
 				+ user;
 		URLConnection connection = new URL(url).openConnection();
 		connection.setRequestProperty("Accept-Charset", "UTF-8");
@@ -96,7 +96,7 @@ public class MyAmazingBot extends TelegramLongPollingBot {
 
 	}
 	public boolean ischannelmember2(String user) throws MalformedURLException, IOException {
-		String url = "https://api.telegram.org/botToken/getChatMember?chat_id=@Agahi_Daneshjouei&user_id="
+		String url = "https://api.telegram.org/bot1982316478:AAF5cVpgnQnqHUe-wZ_h8v9aIMs5nI8e7_4/getChatMember?chat_id=@Agahi_Daneshjouei&user_id="
 				+ user;
 		URLConnection connection = new URL(url).openConnection();
 		connection.setRequestProperty("Accept-Charset", "UTF-8");
@@ -130,7 +130,7 @@ public class MyAmazingBot extends TelegramLongPollingBot {
 
 	public String makeinvite() {
 
-		String url = "https://api.telegram.org/botToken/createChatInviteLink?chat_id=@Agahi_Daneshjouei&member_limit=1";
+		String url = "https://api.telegram.org/bot1982316478:AAF5cVpgnQnqHUe-wZ_h8v9aIMs5nI8e7_4/createChatInviteLink?chat_id=@Agahi_Daneshjouei&member_limit=1";
 		URLConnection connection;
 		try {
 			connection = new URL(url).openConnection();
