@@ -667,7 +667,7 @@ public class MyAmazingBot extends TelegramLongPollingBot {
 									add_to_again(user_id,Integer.valueOf(student2.get("counting").toString()),t);
 									SendMessage s=new SendMessage();
 									s.setText(
-											"آگهی با موفقیت ثبت مجدد شد");
+											"آگهی شما درج مجدد شد✅");
 									s.setChatId(user_id);
 									try {
 										execute(s);
@@ -710,7 +710,7 @@ public class MyAmazingBot extends TelegramLongPollingBot {
 								try {
 									
 									javabot.client.test("", a.get(t), a1.get(t));
-									message.setText("آگهی با موفقیت تغییر کرد");
+									message.setText("آگهی شما منقضی شد✅");
 									message.setChatId(update.getMessage().getChatId().toString());
 
 								} catch (Exception e2) {
@@ -735,8 +735,8 @@ public class MyAmazingBot extends TelegramLongPollingBot {
 
 								for (int j = 1; j < a.size(); j++) {
 
-									temp = temp + "************\n" + "شماره آگهی: " + j + " \n" + a.get(j) + "\n"
-											+ a1.get(j) + "\n************\n";
+									temp = temp + "_________________\n" + "شماره آگهی: " + j + " \n" + a.get(j) + "\n"
+											+ a1.get(j) + "\n_________________\n";
 
 								}
 							}
@@ -861,7 +861,7 @@ public class MyAmazingBot extends TelegramLongPollingBot {
 
 									String matn = update.getMessage().getText();
 									message.setText(
-											"حالا لطفا آیدی یا شماره تماسی که میخای برای آگهیت درج بشه رو بفرست\r\n"
+											"حالا لطفا آیدی یا شماره تماسی که میخوای برای آگهیت درج بشه رو بفرست\r\n"
 													+ "مثال یک: \r\n" + "@Agahi_Daneshjouei\r\n" + "مثال دو:\r\n"
 													+ " 09120000000");
 									message.setChatId(update.getMessage().getChatId().toString());
